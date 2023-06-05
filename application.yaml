@@ -1,0 +1,32 @@
+indexing-settings:
+  sites:
+    - url: http://www.playback.ru
+      name: PlayBack.Ru
+    - url: https://www.ipfran.ru
+      name: IPFran
+#    - url: https://www.radiomv.ru
+#      name: RadioMV
+
+server:
+  port: 8080
+
+connection:
+  userAgent: ClaraSearchBot
+  referrer: https://www.google.com
+
+spring:
+  datasource:
+    username: root
+    password: GoldAngel!050
+    url: jdbc:mysql://localhost:3306/search_engine?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+myapp:
+  pool:
+    parallelism: 10
